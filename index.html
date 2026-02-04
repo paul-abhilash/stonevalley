@@ -147,8 +147,31 @@ cards.forEach(card => {
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="">
 </div>
+  <script>
+  // Get the lightbox elements
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  // Select all images in the gallery
+  const galleryImages = document.querySelectorAll('.gallery img');
+
+  // Add double-click event to each image
+  galleryImages.forEach(img => {
+    img.addEventListener('dblclick', () => {
+      lightbox.style.display = 'flex';  // Show lightbox
+      lightboxImg.src = img.src;         // Set clicked image
+    });
+  });
+
+  // Close lightbox when clicking anywhere on overlay
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
