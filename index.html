@@ -9,16 +9,20 @@
 </head>
 <body>
 
+<!-- Header with Logo top-right -->
 <header>
   <div class="container header-container">
-    <h1>Stone Valley</h1>
-    <p>Natural Stones • Stone Furniture • Decorative Rocks</p>
+    <div class="header-text">
+      <h1>Stone Valley</h1>
+      <p>Natural Stones • Stone Furniture • Decorative Rocks</p>
+    </div>
     <img src="images/logo-1.png" alt="Stone Valley Logo" class="logo">
   </div>
 </header>
 
+<!-- Navigation -->
 <nav>
-  <div class="container">
+  <div class="container nav-container">
     <a href="#about">About</a>
     <a href="#products">Products</a>
     <a href="#gallery">Gallery</a>
@@ -34,7 +38,7 @@
     <p>Beautiful Natural Stone Furniture, Decorative Rocks, and Landscaping Creations</p>
     <div class="hero-buttons">
       <a class="call-btn" href="tel:+918078199773">📞 Call Now</a>
-      <a class="email-btn" href="mailto:stonevalley@zohomail.in , alzabma@gmail.com">✉️ Email Us</a>
+      <a class="email-btn" href="mailto:stonevalley@zohomail.in">✉️ Email Us</a>
     </div>
   </div>
 </section>
@@ -72,19 +76,17 @@
 <section id="gallery">
   <div class="container">
     <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/image-1.jpg" alt="Stone 1"><p>Stone Display 1</p></div>
-      <div class="gallery-item"><img src="images/image-2.jpg" alt="Stone 2"><p>Stone Display 2</p></div>
-      <div class="gallery-item"><img src="images/image-4.jpg" alt="Stone 4"><p>Stone Display 3</p></div>
-      <div class="gallery-item"><img src="images/image-4.jpg" alt="Stone 4"><p>Stone Display 4</p></div>
-      <div class="gallery-item"><img src="images/image-5.jpg" alt="Stone 5"><p>Stone Display 5</p></div>
-      <div class="gallery-item"><img src="images/image-6.jpg" alt="Stone 6"><p>Stone Display 6</p></div>
-      <div class="gallery-item"><img src="images/image-7.jpg" alt="Stone 7"><p>Stone Display 7</p></div>
-      <div class="gallery-item"><img src="images/image-8.jpg" alt="Stone 8"><p>Stone Display 8</p></div>
-      <div class="gallery-item"><img src="images/image-9.jpg" alt="Stone 9"><p>Stone Display 9</p></div>
-      <div class="gallery-item"><img src="images/image-10.jpg" alt="Stone 10"><p>Stone Display 10</p></div>
-      <div class="gallery-item"><img src="images/image-11.jpg" alt="Stone 11"><p>Stone Display 11</p></div>
-      <div class="gallery-item"><img src="images/image-11.jpg" alt="Stone 11"><p>Stone Display 12</p></div>
+    <div class="gallery-container">
+      <div class="gallery">
+        <img src="images/image-1.jpg" alt="Stone 1">
+        <img src="images/image-2.jpg" alt="Stone 2">
+        <img src="images/image-3.jpg" alt="Stone 3">
+        <img src="images/image-4.jpg" alt="Stone 4">
+        <img src="images/image-5.jpg" alt="Stone 5">
+        <img src="images/image-6.jpg" alt="Stone 6">
+        <img src="images/image-7.jpg" alt="Stone 7">
+        <img src="images/image-8.jpg" alt="Stone 8">
+      </div>
     </div>
   </div>
 </section>
@@ -107,8 +109,7 @@
       <p><strong>Phone:</strong> +91 8078199773</p>
       <p><strong>Email:</strong> <a href="mailto:stonevalley@zohomail.in">stonevalley@zohomail.in</a></p>
       <p><strong>Timings:</strong> Mon – Sat | 9:00 AM – 7:00 PM</p>
-     <p><strong>Location:</strong> Stone Valley, Opposite Nayara petrol pump ,Kinfra p.o ,Koratty ,	Pin : 680309 , Thrissur district ,Kerala</p>
-
+      <p><strong>Location:</strong> Stone Valley, Opposite Nayara petrol pump, Kinfra P.O, Koratty, Pin: 680309, Thrissur, Kerala</p>
     </div>
     <div class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7628.09314287673!2d76.34362105918896!3d10.277158247162564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0803c694bb5db5%3A0xc647bf453c7658a!2sStone%20valley!5e0!3m2!1sen!2sin!4v1770209109634!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -116,54 +117,53 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <div class="container">
     <p>© 2026 Stone Valley</p>
   </div>
 </footer>
 
+<!-- WhatsApp Button -->
 <a href="https://wa.me/918078199773" class="whatsapp-btn" target="_blank">💬 WhatsApp</a>
 
-<!-- 3D Tilt Script -->
-<script>
-const cards = document.querySelectorAll('.card, .gallery-item');
-cards.forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const cx = rect.width/2;
-    const cy = rect.height/2;
-    const dx = (x-cx)/cx;
-    const dy = (y-cy)/cy;
-    card.style.transform = `rotateY(${dx*10}deg) rotateX(${-dy*10}deg) scale(1.05)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
-  });
-});
-</script>
 <!-- Lightbox Overlay -->
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="">
 </div>
-  <script>
-  // Get the lightbox elements
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
 
-  // Select all images in the gallery
-  const galleryImages = document.querySelectorAll('.gallery img');
-
-  // Add double-click event to each image
-  galleryImages.forEach(img => {
-    img.addEventListener('dblclick', () => {
-      lightbox.style.display = 'flex';  // Show lightbox
-      lightboxImg.src = img.src;         // Set clicked image
+<!-- Scripts -->
+<script>
+  // 3D tilt effect
+  const cards = document.querySelectorAll('.card, .gallery img');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width/2;
+      const cy = rect.height/2;
+      const dx = (x-cx)/cx;
+      const dy = (y-cy)/cy;
+      card.style.transform = `rotateY(${dx*10}deg) rotateX(${-dy*10}deg) scale(1.05)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
     });
   });
 
-  // Close lightbox when clicking anywhere on overlay
+  // Lightbox for double-click
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const galleryImages = document.querySelectorAll('.gallery img');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('dblclick', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
   function closeLightbox() {
     lightbox.style.display = 'none';
   }
@@ -171,8 +171,3 @@ cards.forEach(card => {
 
 </body>
 </html>
-
-
-
-
-
