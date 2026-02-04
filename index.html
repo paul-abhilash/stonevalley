@@ -40,20 +40,70 @@
   </div>
 </section>
 
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <h2>About Stone Valley</h2>
+    <p>
+      Stone Valley specializes in natural stone solutions. Our collection includes stone furniture, decorative rocks, boulders, and custom stone pieces designed to enhance outdoor and indoor spaces with lasting beauty.
+    </p>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="product-cards">
+      <div class="card">
+        <img src="images/product1.jpg" alt="Natural Stones">
+        <h3>Natural Stones</h3>
+        <p>Raw blocks & slabs</p>
+      </div>
+      <div class="card">
+        <img src="images/product2.jpg" alt="Stone Furniture">
+        <h3>Stone Furniture</h3>
+        <p>Tables, Benches, Chairs</p>
+      </div>
+      <div class="card">
+        <img src="images/product3.jpg" alt="Decorative Rocks">
+        <h3>Decorative Rocks</h3>
+        <p>Boulders & Garden Stones</p>
+      </div>
+      <div class="card">
+        <img src="images/product4.jpg" alt="Rock Sculptures">
+        <h3>Rock Sculptures</h3>
+        <p>Custom Carvings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Gallery Section -->
 <section id="gallery">
   <div class="container">
     <h2>Gallery</h2>
     <div class="gallery-grid" id="gallery-grid">
-      <!-- Images will be loaded dynamically by JavaScript -->
+      <!-- Images dynamically loaded by JS -->
     </div>
   </div>
 </section>
 
-<!-- Lightbox Overlay -->
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="">
-</div>
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact & Location</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> +91 8078199773</p>
+      <p><strong>Email:</strong> <a href="mailto:stonevalley@zohomail.in">stonevalley@zohomail.in</a></p>
+      <p><strong>Timings:</strong> Mon – Sat | 9:00 AM – 7:00 PM</p>
+      <p><strong>Location:</strong> Stone Valley, Opposite Nayara petrol pump, Kinfra P.O, Koratty, Pin: 680309, Thrissur district, Kerala</p>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7628.09314287673!2d76.34362105918896!3d10.277158247162564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0803c694bb5db5%3A0xc647bf453c7658a!2sStone%20valley!5e0!3m2!1sen!2sin!4v1770209109634!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="container">
@@ -64,9 +114,8 @@
 <!-- WhatsApp Button -->
 <a href="https://wa.me/918078199773" class="whatsapp-btn" target="_blank">💬 WhatsApp</a>
 
-<!-- Scripts -->
+<!-- JS: Gallery and Lightbox -->
 <script>
-  // List your uploaded gallery images here (only uploaded images)
   const images = [
     "images/image-1.jpg",
     "images/image-2.jpg",
@@ -93,25 +142,27 @@
   const galleryGrid = document.getElementById('gallery-grid');
 
   images.forEach(src => {
-    // Only add if the image exists
     const img = document.createElement('img');
     img.src = src;
     img.alt = "Stone Gallery";
     img.addEventListener('dblclick', () => {
       lightbox.style.display = 'flex';
-      lightboxImg.src = src; // original resolution
+      lightboxImg.src = src;
     });
     galleryGrid.appendChild(img);
   });
 
-  // Lightbox functionality
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
-
   function closeLightbox() {
     lightbox.style.display = 'none';
   }
 </script>
+
+<!-- Lightbox HTML -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
 
 </body>
 </html>
