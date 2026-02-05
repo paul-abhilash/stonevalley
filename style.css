@@ -57,14 +57,14 @@ nav a:hover { color:#007BFF; }
   position: relative;
   height: 70vh;
   min-height: 420px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
-/* Background video */
+/* video at the back */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -74,25 +74,25 @@ nav a:hover { color:#007BFF; }
   z-index: 1;
 }
 
-/* Dark overlay for readability */
+/* dark overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
   z-index: 2;
 }
 
-/* Text content */
+/* text & buttons ON TOP */
 .hero-content {
   position: relative;
   z-index: 3;
-  color: #fff;
-  max-width: 850px;
+  color: #ffffff;
+  max-width: 900px;
   padding: 20px;
 }
 
 .hero-content h2 {
-  font-size: 44px;
+  font-size: 46px;
   margin-bottom: 12px;
 }
 
@@ -101,14 +101,20 @@ nav a:hover { color:#007BFF; }
   margin-bottom: 24px;
 }
 
-/* Buttons */
+/* buttons */
 .hero-buttons a {
+  display: inline-block;
+  margin: 6px;
+  padding: 12px 26px;
   background: rgba(255,255,255,0.9);
   color: #333;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .hero-buttons a:hover {
-  background: #fff;
+  background: #ffffff;
 }
 
 
@@ -225,6 +231,7 @@ footer {
     font-size: 28px;
   }
 }
+
 
 
 
