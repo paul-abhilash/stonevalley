@@ -116,6 +116,10 @@ nav a:hover { color:#007BFF; }
 .hero-buttons a:hover {
   background: #ffffff;
 }
+.hero-buttons i {
+  margin-right: 8px;
+  font-size: 16px;
+}
 
 
 /* About & Products */
@@ -231,6 +235,7 @@ footer {
     font-size: 28px;
   }
 }
+
 
 
 
