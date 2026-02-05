@@ -30,21 +30,18 @@ header p { margin: 5px 0 0; color:#555; }
 .site-title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 32px;
+  gap: 14px;
+  font-size: 40px;       /* slightly bigger heading */
+  font-weight: 700;
   margin: 0;
+  line-height: 1;        /* ensures logo aligns perfectly */
 }
 
 .logo-inline {
-  height: 45px;
+  height: 1em;           /* EXACT same height as text */
   width: auto;
 }
-
-.tagline {
-  margin-top: 6px;
-  color: #555;
-  font-size: 15px;
-}
+  
 
 
 /* Navigation */
@@ -179,4 +176,16 @@ footer {
   .gallery-grid img, .card img { width:100%; height:auto; }
   nav a { display:block; margin:5px 0; }
 }
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 28px;
+  }
+}
+
 
