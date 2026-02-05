@@ -21,6 +21,31 @@ header {
 header h1 { margin:0; font-size:28px; }
 header p { margin: 5px 0 0; color:#555; }
 .logo { height:60px; }
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 32px;
+  margin: 0;
+}
+
+.logo-inline {
+  height: 45px;
+  width: auto;
+}
+
+.tagline {
+  margin-top: 6px;
+  color: #555;
+  font-size: 15px;
+}
+
 
 /* Navigation */
 nav { background:#fff; border-bottom:1px solid #ddd; }
@@ -154,3 +179,4 @@ footer {
   .gallery-grid img, .card img { width:100%; height:auto; }
   nav a { display:block; margin:5px 0; }
 }
+
