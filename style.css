@@ -52,3 +52,19 @@ footer{background:#fff;border-top:1px solid #ddd;text-align:center;padding:15px 
 /* Responsive */
 @media(max-width:768px){.gallery-horizontal img,.card img{width:45%;height:auto;}.hero h2{font-size:28px;}}
 @media(max-width:480px){.gallery-horizontal img,.card img{width:100%;height:auto;}nav a{display:block;margin:5px 0;}}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007BFF; /* blue on hover */
+}
+
