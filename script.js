@@ -9,7 +9,7 @@ const galleryGrid = document.getElementById('gallery-grid');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-const MAX_IMAGES = 200; // change if more images
+const MAX_IMAGES = 30; // change if more images
 for(let i=1;i<=MAX_IMAGES;i++){
   const img = document.createElement('img');
   img.src = `images/gallery/image-${i}.jpg`;
@@ -24,3 +24,4 @@ for(let i=1;i<=MAX_IMAGES;i++){
 function closeLightbox(){
   lightbox.style.display = 'none';
 }
+
