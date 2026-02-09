@@ -1,3 +1,4 @@
+/* ================= BASE ================= */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -11,48 +12,108 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* ================= HEADER ================= */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
 }
-header h1 { margin:0; font-size:28px; }
-header p { margin: 5px 0 0; color:#555; }
-.logo { height:60px; }
+
 .header-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  height: 72px;   /* SAME height as title + tagline */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Title */
+.title-wrap {
+  text-align: center;
 }
 
 .site-title {
+  font-size: 40px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.tagline {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Social Icons */
+.social-wrap {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 40px;       /* slightly bigger heading */
-  font-weight: 700;
-  margin: 0;
-  line-height: 1;        /* ensures logo aligns perfectly */
+  gap: 16px;
 }
 
-.logo-inline {
-  height: 1em;           /* EXACT same height as text */
-  width: auto;
+.social-wrap a {
+  position: relative;
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
 }
-  
 
+.social-wrap a:hover {
+  color: #007BFF;
+}
 
-/* Navigation */
-nav { background:#fff; border-bottom:1px solid #ddd; }
+/* QR */
+.social-wrap img {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 90px;
+  display: none;
+  background: #fff;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.social-wrap a:hover img {
+  display: block;
+}
+
+/* ================= NAV ================= */
+nav {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+  text-align: center;
+}
+
 nav a {
-  color:#333; text-decoration:none; margin:0 15px; padding:12px 0;
-  display:inline-block; font-weight:500;
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 12px 0;
+  display: inline-block;
+  font-weight: 500;
 }
-nav a:hover { color:#007BFF; }
 
-/* Hero Section */
+nav a:hover {
+  color: #007BFF;
+}
+
+/* ================= HERO ================= */
 .hero {
   position: relative;
   height: 70vh;
@@ -64,169 +125,68 @@ nav a:hover { color:#007BFF; }
   overflow: hidden;
 }
 
-/* video at the back */
 .hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 
-/* dark overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
-  z-index: 2;
 }
 
-/* text & buttons ON TOP */
 .hero-content {
   position: relative;
-  z-index: 3;
-  color: #ffffff;
-  max-width: 900px;
-  padding: 20px;
+  color: #fff;
+  z-index: 2;
 }
 
 .hero-content h2 {
   font-size: 46px;
-  margin-bottom: 12px;
 }
 
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 24px;
-}
-
-/* buttons */
 .hero-buttons a {
   display: inline-block;
   margin: 6px;
   padding: 12px 26px;
-  background: rgba(255,255,255,0.9);
+  background: #fff;
   color: #333;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
 }
 
-.hero-buttons a:hover {
-  background: #ffffff;
-}
-.hero-buttons i {
-  margin-right: 8px;
-  font-size: 16px;
-}
-
-
-/* About & Products */
-h2 { font-size:28px; margin-bottom:20px; }
-p { font-size:16px; line-height:1.6; }
-
-/* Product Cards */
-.product-cards {
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
-}
-.card {
-  background:#fff;
-  border-radius:10px;
-  padding:15px;
-  text-align:center;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor:pointer;
-}
-.card img {
-  width:200px;
-  height:150px;
-  object-fit:cover;
-  border-radius:10px;
-  margin-bottom:10px;
-}
-.card:hover { transform:scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
-
-/* Gallery Section */
-.gallery-grid {
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
-  justify-content:center;
-  margin:40px 0;
-}
-.gallery-grid img {
-  width:220px;
-  height:160px;
-  object-fit:cover;
-  border-radius:10px;
-  cursor:pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.gallery-grid img:hover {
-  transform:scale(1.05);
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Lightbox */
-#lightbox {
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.9);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  cursor:zoom-out;
-  z-index:9999;
-}
-#lightbox img {
-  max-width:90%;
-  max-height:90%;
-  object-fit:contain;
-  border-radius:10px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* WhatsApp Button */
-.whatsapp-btn {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px;
-  border-radius:50px;
-  text-decoration:none;
-  font-size:20px;
-  z-index:1000;
-}
-
-/* Footer */
+/* ================= FOOTER ================= */
 footer {
-  background:#fff;
-  border-top:1px solid #ddd;
-  text-align:center;
-  padding:15px 0;
-  color:#555;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 15px 0;
+  color: #555;
 }
 
-/* Responsive */
-@media(max-width:768px){
-  .gallery-grid img, .card img { width:45%; height:auto; }
-  .hero h2 { font-size:28px; }
-}
-@media(max-width:480px){
-  .gallery-grid img, .card img { width:100%; height:auto; }
-  nav a { display:block; margin:5px 0; }
-}
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .site-logo {
+    height: 60px;
+  }
+
   .site-title {
     font-size: 32px;
+  }
+
+  .social-wrap img {
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 
@@ -235,8 +195,3 @@ footer {
     font-size: 28px;
   }
 }
-
-
-
-
-
